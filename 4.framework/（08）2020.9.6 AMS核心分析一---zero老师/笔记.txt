@@ -1,0 +1,197 @@
+同学们晚上好
+20：05分发车
+
+AMS 
+注意： 本节课与其他课程不同，同学们
+请不要拘泥于源码细节，而是注重流程
+
+正确的阅读方式就是：
+1. 先整体了解大概的流程，
+2. 然后再阅读具体的代码流程
+3. 看完代码流程后再画时序图(作业)
+
+系统的启动流程
+Zygote启动流程
+
+同学们 有一定的c/c++基础
+
+ubuntu android源码下载下来
+编译rom  烧到模拟器
+
+framework专题 
+binder handler android启动流程 基础 
+
+
+android  P 微云 
+
+
+binder 代理模式 
+
+handler  
+
+PMS 电源管理服务
+
+app:
+	res/ 资源其实是有限 app有关
+
+system
+    1. system资源加载 
+
+	
+	xml theme 
+	android 
+	
+	引导服务：
+	 AMS 
+	 
+	 其他服务
+	 AMS辅助 
+	
+	 
+	 AMS  
+	 WMS  窗口管理
+	 PKMS 包管理服务
+	 
+	 SystemServiceManager 专门管理各种服务启动
+	 java层各种服务 AMS，WMS ... 80多种服务
+	
+	 service_manager c/c++
+     leo:
+	 binder服务
+	 
+	 bindler handler=0 binder 
+	 Map 服务名称， 服务实例
+	 ServiceManager.addService(Context.ACTIVITY_SERVICE, this, /* allowIsolated= */ true,
+                    DUMP_FLAG_PRIORITY_CRITICAL | DUMP_FLAG_PRIORITY_NORMAL | DUMP_FLAG_PROTO)
+	leo binder 
+
+binder:
+getservice 
+name              handler=0
+                  解析name找到具体的binder
+service          <-       binder 				  
+
+
+Http:
+c/s
+client             service
+gethub
+url  ->             解析url
+                    业务组件
+结果		<-			
+
+
+	
+	 
+	 Lifecycle extends SystemService
+	 
+	 PHASE_BOOT_COMPLETED代表服务启动完成
+	 
+	 
+	 AMS 初始化
+	 准备事情 全部准备完？ 
+	 
+	 不是？
+	 AMS 通过Lifecycle
+	 好比Activity 
+	 生命周期
+	 管理四大组件
+	 ActiveServices
+	 service 
+	 provider
+	 broadcast
+	 
+	 ActivityStackSupervisor//管理Activity的栈
+	 mActivityStartController
+	 
+	 mRecentTasks
+	 
+	 Android O 28之前是没有的
+	 ClientLifecycleManager
+	 app activity生命周期相关
+	 
+	 Nubia 
+	 干完第一年的时候 懵逼的
+	 
+	 
+	 柯元旦 内核剖析
+	 罗升阳 android系统源码分析
+	 邓平凡
+	 
+	 adb shell dumsys meminfo -p 
+	 
+	 
+	 
+	 OomAdj 手机杀进程有关 
+	 
+	 binder服务
+	 有名称：sm
+	 getservice（name）
+	 
+	 匿名的
+	 
+	 80多个服务初始化了
+	 systemReady
+	 
+	 
+	 init进程  framework的资源
+	 解析init.rc 创建各种服务进程
+	 
+	 mediaservice
+	 守护进程
+	 zygote进程              fork  -> app进程
+	 一个进程所需要的必要资源
+	 preloadclass
+	 vm
+	 
+	fork 大儿子 system_server进程
+	有可能创建进程 单独的进程
+	创建大量的服务
+	加载Androidframework所需要的资源context
+	mResourcesManager = ResourcesManager.getInstance();
+	Context
+	ContextImpl
+	
+	
+	leo binder先看下
+	
+	AMS 三次课 
+	1.
+	2. startactivity app启动
+	3. 
+	
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
